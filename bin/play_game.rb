@@ -19,27 +19,10 @@ result = ""
 message = ""
 until result == "quit"
   #output room and collect input
-  ScreenUtil.clear
-  STDOUT.flush
-  unless message.empty?
-    puts "#{message}"
-  end
-  unless game.previous_action.nil?
-    puts "Previous action: #{game.previous_action}"
-  end
-  puts "[#{game.current_room["name"]}]"
-  puts game.current_room["description"]
-  unless game.current_room["items"].nil?
-    puts "Obvious items: #{ScreenUtil.output_items(game)}"
-  end
-  unless game.player.item.nil?
-    puts "Current inventory: #{game.player.item["name"]}"
-  end
-  puts "Obvious paths: #{GoAction.output_directions(game)}"
-  puts "Available Commands: 'go [place]', 'look at [thing]' 'pick up [thing]', 'drop [thing]', 'use [thing]', 'quit'"
+  ScreenUtil.display_output(game, message)
   game.previous_action = result = gets.chomp
 
-  #parse input and execute action
+  #parse input and execute actions
   parsed_results = result.split(' ')
   message = ""
   if parsed_results.first == "go"
