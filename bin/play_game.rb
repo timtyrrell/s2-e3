@@ -1,10 +1,19 @@
 require File.dirname(__FILE__)+ '/../lib/game'
-require './screen_util.rb'
+require File.dirname(__FILE__)+ '/../lib/player'
+require File.dirname(__FILE__)+ '/../lib/screen_util'
+require File.dirname(__FILE__)+ '/../lib/look_action'
+require File.dirname(__FILE__)+ '/../lib/go_action'
+require File.dirname(__FILE__)+ '/../lib/pick_up_action'
+require File.dirname(__FILE__)+ '/../lib/drop_action'
 require 'yaml'
 
-rooms = YAML::load(File.open('./world.yml'))
+yaml_file = File.dirname(__FILE__)+ '/../lib/world.yml'
 
-game = Game.new(rooms)
+rooms = YAML::load(File.open(yaml_file))
+
+player = Player.new
+game = Game.new(rooms, player)
+
 
 result = ""
 message = ""
@@ -23,7 +32,10 @@ until result == "quit"
   unless game.current_room["items"].nil?
     puts "Obvious items: #{ScreenUtil.output_items(game)}"
   end
-  puts "Obvious paths: #{ScreenUtil.output_directions(game)}"
+  unless game.player.item.nil?
+    puts "Current inventory: #{game.player.item["name"]}"
+  end
+  puts "Obvious paths: #{GoAction.output_directions(game)}"
   puts "Available Commands: 'go [place]', 'look at [thing]' 'pick up [thing]', 'drop [thing]', 'use [thing]', 'quit'"
   game.previous_action = result = gets.chomp
 
@@ -31,23 +43,15 @@ until result == "quit"
   parsed_results = result.split(' ')
   message = ""
   if parsed_results.first == "go"
-    if ScreenUtil.is_a_possible_direction?(game, parsed_results[1])
-      game.current_room = ScreenUtil.match_direction_to_room(game, parsed_results[1])
-    else
-      message = "*** #{parsed_results[1]} is not a supported direction ***"
-    end
+    message = GoAction.go(game, parsed_results[1])
   elsif parsed_results.first == "look" and parsed_results[1] == "at"
-    if ScreenUtil.is_a_lookable_item?(game, parsed_results[2])
-      message =  ScreenUtil.match_item_to_room(game, parsed_results[2])
-    else
-      message = "*** #{parsed_results[2]} is not a supported lookable item ***"
-    end
+    message = LookAction.look(game, parsed_results[2])
   elsif parsed_results.first == "pick" and parsed_results[1] == "up"
-    message =  "pick up #{parsed_results.last}"
+    message =  PickUpAction.pick_up(game, parsed_results[2])
   elsif parsed_results.first == "drop"
-    message =  "drop #{parsed_results.last}"
+    message =  DropAction.drop(game, parsed_results[1])
   elsif parsed_results.first == "use"
-    message =  "use #{parsed_results.last}"
+    message =  "use #{parsed_results[1]}"
   else
     message = "*** #{result} is not a supported action ***"
   end

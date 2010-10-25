@@ -1,7 +1,7 @@
 #rooms:
 - id: 1
   name: Vast forest entrance
-  description: Room with the cat
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - n : 3
     - e : 4
@@ -9,18 +9,16 @@
   items:
     - name : kitten
       detail : The kitten appears to be very thisty and close to death
-      action : use doorknob
+      action : SOMETHING WITH WATER
 - id: 2
-  name: Vast Forest2
-  description: Room with backpack
+  name: Vast Forest, near the entrance
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - e : 1
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
 - id: 3
   name: Vast Forest3
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - s : 1
     - n : 6
@@ -29,111 +27,93 @@
       detail : The backpack appears to be empty
 - id: 4
   name: Vast Forest4
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - w : 1
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
 - id: 5
   name: Vast Forest5
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - e : 6
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
 - id: 6
   name: Vast Forest6
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - s : 3
     - w : 5
     - e : 7
     - n : 9
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
 - id: 7
   name: Vast Forest7
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - w : 6
     - n : 10
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
+    - name : cave
+      detail : It looks to be a very dark cave, both slippery and imposing.
 - id: 8
   name: Vast Forest8
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - s : 5
     - e : 9
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
+    - name : bucket
+      detail : The bucket is empty
 - id: 9
   name: Vast Forest9
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - s : 6
     - w : 8
     - e : 10
     - n : 11
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
 - id: 10
   name: Vast Forest10
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - w : 9
     - s : 7
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
 - id: 11
   name: Vast Forest11
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - s : 9
     - n : 13
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
 - id: 12
   name: Vast Forest12
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - e : 13
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
 - id: 13
   name: Vast Forest13
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - w : 12
     - s : 11
     - n : 14
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
 - id: 14
   name: Vast Forest14
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
     - s : 13
     - e : 15
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
 - id: 15
   name: Vast Forest15
-  description: Room with backpack
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
   places:
-    - 4 : 14
+    - w : 14
   items:
-    - name : backpack
-      detail : The backpack appears to be empty
+    - name : river
+      detail : The river looks to be clean and pure.
 
