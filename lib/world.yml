@@ -9,7 +9,6 @@
   items:
     - name : kitten
       detail : The kitten appears to be very thisty and close to death
-      action : SOMETHING WITH WATER
 - id: 2
   name: Vast Forest, near the entrance
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
@@ -64,6 +63,9 @@
   items:
     - name : bucket
       detail : The bucket is empty
+      uses :
+        - 1  : You gave the kitten water and now it looks rejuvenated!
+        - 15 : You filled up the bucket with water
 - id: 9
   name: Vast Forest9
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis semper dapibus. Maecenas erat quam, porta imperdiet tempus quis, interdum a metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin rhoncus diam volutpat ante pellentesque placerat rutrum vitae risus.
