@@ -1,47 +1,139 @@
 #rooms:
 - id: 1
-  name: Startin Room
-  description: The is the desc for room 1
+  name: Vast forest entrance
+  description: Room with the cat
   places:
-    - n : 2
-    - s : 3
+    - n : 3
     - e : 4
-    - w : 5
+    - w : 2
   items:
-    - name : door
-      detail : The door is old and has a knob
+    - name : kitten
+      detail : The kitten appears to be very thisty and close to death
       action : use doorknob
 - id: 2
-  description: Another room desc
+  name: Vast Forest2
+  description: Room with backpack
+  places:
+    - e : 1
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 3
+  name: Vast Forest3
+  description: Room with backpack
   places:
     - s : 1
-
-#invoice: 34843
-#date   : 2001-01-23
-#bill-to: &id001
-#    given  : Chris
-#    family : Dumars
-#    address:
-#        lines: |
-#            458 Walkman Dr.
-#            Suite #292
-#        city    : Royal Oak
-#        state   : MI
-#        postal  : 48046
-#ship-to: *id001
-#product:
-#    - sku         : BL394D
-#      quantity    : 4
-#      description : Basketball
-#      price       : 450.00
-#    - sku         : BL4438H
-#      quantity    : 1
-#      description : Super Hoop
-#      price       : 2392.00
-#tax  : 251.42
-#total: 4443.52
-#comments: >
-#    Late afternoon is best.
-#    Backup contact is Nancy
-#    Billsmer @ 338-4338.
+    - n : 6
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 4
+  name: Vast Forest4
+  description: Room with backpack
+  places:
+    - w : 1
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 5
+  name: Vast Forest5
+  description: Room with backpack
+  places:
+    - e : 6
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 6
+  name: Vast Forest6
+  description: Room with backpack
+  places:
+    - s : 3
+    - w : 5
+    - e : 7
+    - n : 9
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 7
+  name: Vast Forest7
+  description: Room with backpack
+  places:
+    - w : 6
+    - n : 10
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 8
+  name: Vast Forest8
+  description: Room with backpack
+  places:
+    - s : 5
+    - e : 9
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 9
+  name: Vast Forest9
+  description: Room with backpack
+  places:
+    - s : 6
+    - w : 8
+    - e : 10
+    - n : 11
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 10
+  name: Vast Forest10
+  description: Room with backpack
+  places:
+    - w : 9
+    - s : 7
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 11
+  name: Vast Forest11
+  description: Room with backpack
+  places:
+    - s : 9
+    - n : 13
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 12
+  name: Vast Forest12
+  description: Room with backpack
+  places:
+    - e : 13
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 13
+  name: Vast Forest13
+  description: Room with backpack
+  places:
+    - w : 12
+    - s : 11
+    - n : 14
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 14
+  name: Vast Forest14
+  description: Room with backpack
+  places:
+    - s : 13
+    - e : 15
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
+- id: 15
+  name: Vast Forest15
+  description: Room with backpack
+  places:
+    - 4 : 14
+  items:
+    - name : backpack
+      detail : The backpack appears to be empty
 

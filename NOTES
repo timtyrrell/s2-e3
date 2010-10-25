@@ -2,3 +2,5 @@
 - "game_controller" will take in a hash with the action and the item/path (pass in current location, also?)
 - gc will look up the action and see if it can be performed on the item/path
 
+another yaml for actions?
+

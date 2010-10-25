@@ -13,38 +13,43 @@ until result == "quit"
   ScreenUtil.clear
   STDOUT.flush
   unless message.empty?
-    puts "*** #{message} ***"
+    puts "#{message}"
   end
   unless game.previous_action.nil?
     puts "Previous action: #{game.previous_action}"
   end
   puts "[#{game.current_room["name"]}]"
   puts game.current_room["description"]
+  unless game.current_room["items"].nil?
+    puts "Obvious items: #{ScreenUtil.output_items(game)}"
+  end
   puts "Obvious paths: #{ScreenUtil.output_directions(game)}"
-  puts "Available Commands: 'go [place]', 'look at [thing]' 'pick up [thing]', 'drop [thing]', 'use [thing]'"
+  puts "Available Commands: 'go [place]', 'look at [thing]' 'pick up [thing]', 'drop [thing]', 'use [thing]', 'quit'"
   game.previous_action = result = gets.chomp
 
-  #parse input
+  #parse input and execute action
   parsed_results = result.split(' ')
+  message = ""
   if parsed_results.first == "go"
-    # is the selected direction an option?
-    if ScreenUtil.output_directions(game).include?(parsed_results.last)
-      message = ""
-      #of the available places
-      game.current_room["places"].each do |place|
-          place.each do |key, value|
-            #get the value for the direction selected
-            game.rooms.each do |room|
-              #match the value to an id of a room and set it the current_room
-              if room["id"] == value
-                game.current_room = room
-              end
-            end
-          end
-        end
+    if ScreenUtil.is_a_possible_direction?(game, parsed_results[1])
+      game.current_room = ScreenUtil.match_direction_to_room(game, parsed_results[1])
     else
-       message = "#{parsed_results.last} is not supported direction"
+      message = "*** #{parsed_results[1]} is not a supported direction ***"
     end
+  elsif parsed_results.first == "look" and parsed_results[1] == "at"
+    if ScreenUtil.is_a_lookable_item?(game, parsed_results[2])
+      message =  ScreenUtil.match_item_to_room(game, parsed_results[2])
+    else
+      message = "*** #{parsed_results[2]} is not a supported lookable item ***"
+    end
+  elsif parsed_results.first == "pick" and parsed_results[1] == "up"
+    message =  "pick up #{parsed_results.last}"
+  elsif parsed_results.first == "drop"
+    message =  "drop #{parsed_results.last}"
+  elsif parsed_results.first == "use"
+    message =  "use #{parsed_results.last}"
+  else
+    message = "*** #{result} is not a supported action ***"
   end
 end
 
