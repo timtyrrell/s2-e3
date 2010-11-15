@@ -1,4 +1,4 @@
-#require File.dirname(__FILE__)+ '/../lib/game'
+require File.dirname(__FILE__)+ '/../lib/use'
 
 describe "use action stratey" do
   before(:each) do
@@ -6,21 +6,11 @@ describe "use action stratey" do
   end
 
   it "should match when the text begins with 'use'" do
-    @use.match?("use cheese").should == true
+    @use.matches?("use cheese").should == true
   end
 
   it "should not match when the text does not begin with 'use'" do
-    @use.match?("look cheese").should == false
-  end
-end
-
-class Use
-  def match?(text)
-    parsed_text = text.split(' ')
-    if parsed_text.first == "use"
-      return true
-    end
-    false
+    @use.matches?("look cheese").should == false
   end
 end
 

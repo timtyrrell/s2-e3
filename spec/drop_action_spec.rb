@@ -1,4 +1,4 @@
-#require File.dirname(__FILE__)+ '/../lib/game'
+require File.dirname(__FILE__)+ '/../lib/drop'
 
 describe "drop action stratey" do
   before(:each) do
@@ -6,21 +6,11 @@ describe "drop action stratey" do
   end
 
   it "should match when the text begins with 'drop'" do
-    @drop.match?("drop cheese").should == true
+    @drop.matches?("drop cheese").should == true
   end
 
   it "should not match when the text does not begin with 'drop'" do
-    @drop.match?("look cheese").should == false
-  end
-end
-
-class Drop
-  def match?(text)
-    parsed_text = text.split(' ')
-    if parsed_text.first == "drop"
-      return true
-    end
-    false
+    @drop.matches?("look cheese").should == false
   end
 end
 

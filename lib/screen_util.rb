@@ -1,6 +1,3 @@
-#require './go_action.rb'
-require File.dirname(__FILE__)+ '/go_action'
-
 module ScreenUtil
   extend self
 
@@ -38,10 +35,20 @@ module ScreenUtil
     unless game.player.item.nil?
       puts "Current inventory: #{game.player.item["name"]}"
     end
-    puts "Obvious paths: #{GoAction.output_directions(game)}"
+    puts "Obvious paths: #{output_directions(game)}"
     puts "Available Commands: 'go [place]', 'look at [thing]' 'pick up [thing]', 'drop [thing]', 'use [thing]', 'quit'"
-
   end
 
+  private
+    #put the directions in a readable list
+    def output_directions(game)
+      directions = []
+      game.current_room["places"].each do |place|
+        place.each do |key, value|
+          directions << key
+        end
+      end
+      directions.join(", ")
+    end
 end
 

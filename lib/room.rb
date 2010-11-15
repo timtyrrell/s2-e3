@@ -8,5 +8,10 @@ class Room
     @places = places
     @items = items
   end
+
+  def clear_items
+    @items.clear
+  end
+
 end
 
