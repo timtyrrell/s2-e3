@@ -1,3 +1,5 @@
+require File.dirname(__FILE__)+ '/../lib/screen_util'
+
 class Game
   attr_accessor :rooms, :current_room, :previous_action, :player, :actions
 
@@ -12,11 +14,17 @@ class Game
     @actions << action
   end
 
-#  def run
-#
-#  trigger execute_action method above when given input
+  def run
+    result = ""
+    message = ""
+    until result == "quit"
+      #output room and collect input
+      ScreenUtil.display_output(self, message)
+      @previous_action = result = gets.chomp
+      message = execute_input_action(result)
+  end
 
-#  end
+  end
 
   def add_item_to_current_room(item)
     @current_room["items"] << item
@@ -30,7 +38,7 @@ class Game
     @current_room["items"].clear
   end
 
-  #private
+  private
     def execute_input_action(input)
       action = @actions.find { |act| act.matches?(input) }
       if action.nil?
