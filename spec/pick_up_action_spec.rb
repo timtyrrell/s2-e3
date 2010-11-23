@@ -1,8 +1,9 @@
-require File.dirname(__FILE__)+ '/../lib/pick_up'
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
+require 'kitten_rescue'
 
 describe "pick up strategy" do
   before(:each) do
-    @pickup = PickUp.new
+    @pickup = KittenRescue::Actions::PickUp.new
   end
 
   it "should match when the text begins with 'pick up'" do

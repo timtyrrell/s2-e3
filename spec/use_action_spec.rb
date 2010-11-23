@@ -1,8 +1,9 @@
-require File.dirname(__FILE__)+ '/../lib/use'
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
+require 'kitten_rescue'
 
 describe "use action stratey" do
   before(:each) do
-    @use = Use.new
+    @use = KittenRescue::Actions::Use.new
   end
 
   it "should match when the text begins with 'use'" do

@@ -1,8 +1,9 @@
-require File.dirname(__FILE__)+ '/../lib/look'
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
+require 'kitten_rescue'
 
 describe "look action strategy" do
   before(:each) do
-    @look = Look.new
+    @look = KittenRescue::Actions::Look.new
   end
 
   it "should match when the text begins with 'look at'" do

@@ -1,8 +1,9 @@
-require File.dirname(__FILE__)+ '/../lib/go'
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
+require 'kitten_rescue'
 
 describe "Go action stratey" do
   before(:each) do
-    @go = Go.new
+    @go = KittenRescue::Actions::Go.new
   end
 
   it "should match when the text begins with 'go'" do
